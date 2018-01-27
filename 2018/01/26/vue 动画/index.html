@@ -5,12 +5,18 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="过渡&amp;amp;动画Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用过渡效果。包括以下工具：  在 CSS 过渡和动画中自动应用 class 可以配合使用第三方 CSS 动画库，如 Animate.css 在过渡钩子函数中使用 JavaScript 直接操作 DOM 可以配合使用第三方 JavaScript 动画库，如 Velocity.js  过渡的类名在进入/离开的过渡中，会有">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/01/26/vue 动画/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="过渡&amp;amp;动画Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用过渡效果。包括以下工具：  在 CSS 过渡和动画中自动应用 class 可以配合使用第三方 CSS 动画库，如 Animate.css 在过渡钩子函数中使用 JavaScript 直接操作 DOM 可以配合使用第三方 JavaScript 动画库，如 Velocity.js  过渡的类名在进入/离开的过渡中，会有">
+<meta property="og:image" content="http://yoursite.com/img/vueTransition.jpg">
+<meta property="og:updated_time" content="2018-01-27T12:34:26.968Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="过渡&amp;amp;动画Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用过渡效果。包括以下工具：  在 CSS 过渡和动画中自动应用 class 可以配合使用第三方 CSS 动画库，如 Animate.css 在过渡钩子函数中使用 JavaScript 直接操作 DOM 可以配合使用第三方 JavaScript 动画库，如 Velocity.js  过渡的类名在进入/离开的过渡中，会有">
+<meta name="twitter:image" content="http://yoursite.com/img/vueTransition.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +65,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-vue 动画" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-vue 动画" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/01/26/vue 动画/" class="article-date">
   <time datetime="2018-01-26T11:33:03.063Z" itemprop="datePublished">2018-01-26</time>
@@ -117,106 +121,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-VUE" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/25/VUE/" class="article-date">
-  <time datetime="2018-01-25T11:11:28.000Z" itemprop="datePublished">2018-01-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/25/VUE/">VUE</a>
-    </h1>
+    <a href="/2018/01/25/VUE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">VUE</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><ul>
-<li>概念：Vue.js 可以自定义过滤器，<strong>可被用作一些常见的文本格式化</strong>。</li>
-<li>过滤器一般用在两个地方：<strong>mustache 插值和 v-bind 表达式</strong>。</li>
-<li>过滤器应该被添加在 JavaScript 表达式的尾部，由“管道”符指示；</li>
-<li>当调用过滤器后，并不会修改元数据</li>
-<li>过滤器的定义方式 Vue.filter(过滤器名称,处理函数);(全局过滤器)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;!-- 当 对某些数据，调用过滤器之后，并不会修改 原数据 --&gt;</span><br><span class="line">    &lt;!-- 在 调用 过滤器的时候，可以传参 --&gt;</span><br><span class="line">    &lt;!-- 过滤器可以连续调用多个 --&gt;</span><br><span class="line">    &lt;h4&gt;&#123;&#123; msg | strFormat(&apos;hello&apos;) | addStr &#125;&#125;&lt;/h4&gt;</span><br><span class="line">    &lt;hr&gt;</span><br><span class="line">    &lt;h4&gt;&#123;&#123; msg | addStr &#125;&#125;&lt;/h4&gt;</span><br><span class="line">    &lt;!-- &lt;h4&gt;&#123;&#123; msg &#125;&#125;&lt;/h4&gt; --&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    // 第一个参数： 过滤器的名称</span><br><span class="line">    // 第二个参数： 处理函数</span><br><span class="line">    // 在 处理函数的形参列表中，第一个形参的作用，以经被Vue规定死了，永远都是 管道符 前面的 值</span><br><span class="line">    // 在 function 的形参中，可以使用 = 为形参设置默认值</span><br><span class="line">    Vue.filter(&apos;strFormat&apos;, function (val, wordsName = &apos;world&apos;) &#123;</span><br><span class="line">      // 字符串 的  replace 方法，第一个参数，可以接收 正则表达式，来进行匹配</span><br><span class="line">      return val.replace(/world/g, wordsName)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // 为 传递过来的字符串，加上一个 波浪线的小尾巴，并返回</span><br><span class="line">    Vue.filter(&apos;addStr&apos;, function (val) &#123;</span><br><span class="line">      return val + &apos;~~~~~~~&apos;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    // 创建 Vue 实例，得到 ViewModel</span><br><span class="line">    var vm = new Vue(&#123;</span><br><span class="line">      el: &apos;#app&apos;,</span><br><span class="line">      data: &#123;</span><br><span class="line">        msg: &apos;One world,one dream,one world,one dream!&apos;</span><br><span class="line">      &#125;,</span><br><span class="line">      methods: &#123;&#125;</span><br><span class="line">    &#125;);</span><br><span class="line">   &lt;/script&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="私有过滤器"><a href="#私有过滤器" class="headerlink" title="私有过滤器"></a>私有过滤器</h3><ul>
-<li>语法：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var vm=new Vue(&#123;</span><br><span class="line">  el:&apos;#app&apos;,</span><br><span class="line">  data:&#123;&#125;,</span><br><span class="line">  filters:&#123;&#125;</span><br><span class="line">    过滤器的名称：function()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意：当同一个标签中既存在全局过滤器又存在私有过滤器的情况下，遵循就近原则</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/25/VUE/" data-id="cjcueimzl0001fct6iih3ju6x" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/24/hello-world/" class="article-date">
-  <time datetime="2018-01-24T09:02:12.584Z" itemprop="datePublished">2018-01-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/24/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/24/hello-world/" data-id="cjcueimzl0000fct69zfgmnmo" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
