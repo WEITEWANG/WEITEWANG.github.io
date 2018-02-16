@@ -61,6 +61,47 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-webpack" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/16/webpack/" class="article-date">
+  <time datetime="2018-02-16T11:26:00.320Z" itemprop="datePublished">2018-02-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="webpack-打包工具基本使用方法"><a href="#webpack-打包工具基本使用方法" class="headerlink" title="webpack 打包工具基本使用方法"></a>webpack 打包工具基本使用方法</h1><h2 id="首先安装webpack打包工具"><a href="#首先安装webpack打包工具" class="headerlink" title="首先安装webpack打包工具"></a>首先安装webpack打包工具</h2><ol>
+<li>使用nmp/cnpm 安装webpack  npm/cnpm install webpack -g;</li>
+<li>创建项目 mkdir src  src中存放项目原文件，创建一个main.js文件 作用是项目入口文件,在同级目录下添加index.html文件，在src同级目录下创建dist文件夹，用于存放webpack打包好的文件，将main.js文件使用webpack打包(首先进入src目录下 在该目录下执行webpack main.js ./dist/bundle.js )</li>
+</ol>
+<ul>
+<li>注意：webpack会根据模块的依赖关系进行静态分析，这些文件（模块）会被包含到bundle.js文件中。webpack会给每个模块分配一个唯一的id并通过这个id索引访问相应模块。在页面启动时，会先执行main.js中的代码，其他模块会在运行require的时候再执行。</li>
+</ul>
+<h2 id="loader"><a href="#loader" class="headerlink" title="loader"></a>loader</h2><ul>
+<li>webpack 本身只能处理JavaScript模块，如果要会其他类型的文件，就需要使用loader进行转换。如果我们需要在应用中添加 css 文件，就需要使用到 css-loader 和 style-loader，他们做两件不同的事情，css-loader 会遍历 CSS 文件，然后找到 url() 表达式然后处理他们，style-loader 会把原来的 CSS 代码插入页面中的一个 style 标签中。安装css-loader 和style-loader命令 在配置文件中安装使用(执行顺序从后往前执行)：<br>  module:{<br>  rules:[<br>  {test:/.css$/,use:[‘style-loader’,’css-loader’]},<br>  {test:/.less$/,use:[‘style-loader’,’css-loader’,’less-loader’]},<br>  {test:/.scss$/,use:[‘style-loader’,’css-loader’,’sass-loader’]},<br>  {test:/.jpg|png|gif|bmp$/,use:[‘url-loader?name=[hash:8]-[name].[ext]’]},<br>  {test:/.ttf|eot|svg|woff|woff2$/,use:[‘url-loader’]},<br>  {test:/.js/,use:[‘babel-loader’],exclude:/node_modules/},<br>  {test:/.vue$/,use:[‘vue-loader’]}<br>]<br>  }</li>
+</ul>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><ul>
+<li>我们可以将一些编译选项放在配置文件中，以便于统一管理：<br>创建webpack.config.js文件<br>onst path=require(‘path’);</li>
+</ul>
+<p>// 导入html-webpack-plugin,得到一个构造函数<br>const HtmlPlugin=require(‘html-webpack-plugin’);<br>const htmlPluginObj=new HtmlPlugin({<br>    template:path.join(__dirname,’./src/index.html’),//指定模板文件<br>    filename:’index.html’//指定生成页面的名称<br>});</p>
+<p>// –hot热更新/热刷新/热重载 能够提高打包效率，因为热更新只是 把需要重新打包的代码编译了一下，并以打补丁的形式，热更新到了页面中，并没有重新编译整个项目<br>// 而且 –hot也能够实现页面的无刷新重载（这个无刷新重载对js无效，只对css有效）<br>module.exports={<br>    // 指定入口和出口<br>   entry:path.join(<strong>dirname,’./src/main.js’),<br>   output:{<br>       path:path.join(</strong>dirname,’./dist’),//指定输出文件夹<br>       filename:’bundle.js’<br>   } ,//出口<br>   plugins:[<br>       htmlPluginObj<br>   ],<br>//    样式引入<br>module:{<br>    rules:[<br>    {test:/.css$/,use:[‘style-loader’,’css-loader’]},<br>    // {test:/.less$/,use:[‘style-loader’,’css-loader’,’less-loader’]},<br>    {test:/.scss$/,use:[‘style-loader’,’css-loader’,’sass-loader’]},<br>    {test:/.jpg|png|gif|bmp$/,use:[‘url-loader?name=[hash:8]-[name].[ext]’]},<br>    {test:/.ttf|eot|svg|woff|woff2$/,use:[‘url-loader’]},<br>    {test:/.js/,use:[‘babel-loader’],exclude:/node_modules/},<br>    {test:/.vue$/,use:[‘vue-loader’]}<br>]<br>    }<br>}</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/16/webpack/" data-id="cjdpwxjnj0000hst6vfpusi59" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-vue 动画" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/01/26/vue 动画/" class="article-date">
@@ -234,7 +275,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
     </div>
   </div>
 
@@ -245,6 +286,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/02/16/webpack/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2018/01/26/vue 动画/">(no title)</a>
